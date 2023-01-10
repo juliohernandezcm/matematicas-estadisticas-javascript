@@ -44,3 +44,29 @@ console.log({
 });
 
 console.groupEnd('Triangulo');
+
+console.group('Circle');
+
+const circleRadio = 3;
+const circleDiameter = circleRadio * 2;
+
+const circumference = circleDiameter * Math.PI.toFixed(3);
+const circleArea = circleRadio ** 2 * Math.PI.toFixed(3);
+
+console.log({
+	circleRadio,
+	circleDiameter,
+	circumference,
+	circleArea,
+});
+
+const calculateCircle = (radio) => {
+	const diameter = radio * 2;
+	const radiusSquared = Math.pow(radio, 2);
+	return {
+		circunferencia: diameter * Math.PI.toFixed(3),
+		area: radiusSquared * Math.PI.toFixed(3),
+	};
+};
+
+console.groupEnd('Circle');
