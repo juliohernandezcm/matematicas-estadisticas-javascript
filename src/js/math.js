@@ -34,6 +34,31 @@ const calculateTriangle = (side1, side2, base, height) => {
 	};
 };
 
+const calculateTriangleHeigth = (sides, base) => {
+	if (sides === base) {
+		console.warn('Este no es triángulo isosceles');
+	} else {
+		return Math.sqrt(sides ** 2 - base ** 2 / 4);
+	}
+};
+
+const calculateHeightScalenTriangle = (side1, side2, base) => {
+	if (side1 == side2 || side1 == base || side2 == base) {
+		console.warn('Este no es un triángulo Escaleno');
+	} else {
+		const semiperimeter = (side1 + side2 + base) / 2;
+		return (
+			(2 / side1) *
+			Math.sqrt(
+				semiperimeter *
+					(semiperimeter - side1) *
+					(semiperimeter - side2) *
+					(semiperimeter - base)
+			)
+		);
+	}
+};
+
 console.log({
 	triangleSide1,
 	triangleSide2,
