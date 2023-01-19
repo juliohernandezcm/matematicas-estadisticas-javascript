@@ -27,7 +27,7 @@ MathFunctions.listIsOdd = (list) => {
 
 // Ordena array
 MathFunctions.sortList = (unorderedList) => {
-	return (unorderedList = list.sort((a, b) => a - b));
+	return unorderedList.sort((a, b) => a - b);
 };
 
 //calcula moda
@@ -51,7 +51,7 @@ MathFunctions.calculateMode = (list) => {
 
 // Calcula media
 MathFunctions.calculateMedian = (list) => {
-	const isOdd = listIsOdd(list);
+	const isOdd = MathFunctions.listIsOdd(list);
 
 	let middleIndex;
 	let median;
